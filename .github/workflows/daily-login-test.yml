@@ -26,8 +26,11 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Login Test
+      - name: Run Test
         run: npx playwright test
+        env:
+            LOGIN_EMAIL: ${{ secrets.LOGIN_EMAIL }}
+            LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
 
       - name: Upload Report
         if: always()
