@@ -38,3 +38,6 @@ jobs:
         with:
           name: playwright-report
           path: playwright-report/
+          
+      - name: Debug
+        run: echo "Workflow is running at $(date)"
