@@ -2,7 +2,8 @@ name: Daily Login Test
 
 on:
   schedule:
-    - cron: '* * * * *' # every 5 minutes for testing
+    - cron: '15 9 * * 1-5' # 45 3 * * * 
+      timezone: 'Asia/Kolkata'
   workflow_dispatch:       # manual trigger option
 
 jobs:
